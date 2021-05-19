@@ -5,12 +5,24 @@
 }
 
 html {
-	background-image: linear-gradient( purple, red);
+    height: 100%;
+}
+
+body {
+	background-image: linear-gradient(purple, red);
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat:repeat;
+    background-attachment: fixed;
+
 }
 
 .wrapper {
 	width: 100%;
-	max-width: 960px;
+	max-width: 1000px;
 	height: auto;
     margin: 0 auto;
     border: 2px solid black;
@@ -39,6 +51,7 @@ nav ul {
 	padding: 0;
 	display: flex;
     flex-wrap: wrap;
+    
 }
 
 nav ul li {
@@ -59,14 +72,16 @@ nav ul li a:hover {
 	background-color: #757575;
 }
 
-body {
-    height: 60em;
-}
-
 section {
     display:flex;
+    flex-direction: row;
+    overflow-x: auto;
     max-width: 100%;
     height: auto;
+}
+
+body {
+    height: 60em;
 }
 
 article {
@@ -151,3 +166,13 @@ footer ul li a:last-child {
 
 footer ul li a:hover {
     background-color: #757575;
+}
+  
+/* For mobile phones: */
+@media only screen and (max-width: 768px) {
+    section {
+        display:flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+}

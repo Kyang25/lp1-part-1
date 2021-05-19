@@ -8,6 +8,10 @@ html {
 	background-image: linear-gradient(blue,green);
 }
 
+#transition{
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
 .wrapper {
 	width: 100%;
 	max-width: 960px;
@@ -57,6 +61,42 @@ nav ul li a:hover {
 	background-color: #757575;
 }
 
+.one {
+
+    transition-duration: 4s;
+}
+
+.back {
+    width: 100px;
+    height: 100px;
+    background:blue;
+    transition-delay: 6s;
+    transition: width 2s;
+}
+
+.back:hover {
+    transition-timing-function: ease-in-out);
+    width: 200px;
+}
+
+.background {
+    width: 100px;
+    height: 100px;
+    background:greenyellow;
+
+  }
+  
+.background:hover {
+    transition-timing-function: ease-in-out;
+    width: 300px;
+  }
+
+  .right {
+      float: right;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+
 section {
     display:flex;
     max-width: 100%;
@@ -102,12 +142,14 @@ aside p {
 
 footer {
     display: flex;
+    transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
     background-color: #212121;
     border-top: 2px solid black;
     padding: 10px;
     padding-right: 0;
     justify-content: space-between;
     flex-wrap: wrap;
+    transition-property: all;
 }
 
 footer p {

@@ -1,0 +1,38 @@
+div {
+  width: 200px;
+  height: 200px;
+  background-color: coral;
+  animation: square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate;
+}
+
+.right {
+  float: right;
+}
+ 
+@keyframes square-to-circle {
+  0%  {
+    border-radius:0 0 0 0;
+    background:coral;
+    transform:rotate(0deg);
+  }
+  25%  {
+    border-radius:50% 0 0 0;
+    background:rgb(212, 40, 218);
+    transform:rotate(45deg);
+  }
+  50%  {
+    border-radius:50% 50% 0 0;
+    background:rgb(182, 219, 46);
+    transform:rotate(90deg);
+  }
+  75%  { 
+    border-radius:50% 50% 50% 0;
+    background:rgb(187, 39, 39);
+    transform:rotate(135deg);
+  }
+  100% {  
+    border-radius:50%;
+    background: rgb(21, 196, 30);
+    transform:rotate(180deg);
+  }
+}
