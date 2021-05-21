@@ -8,6 +8,55 @@ html {
     height: 100%;
 }
 
+aside div {
+    width:100px;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 30px;
+    background-color: coral;
+    animation: square-to-circle 2s .5s infinite cubic-bezier(1,.015,.295,1.225) alternate;
+  }
+
+   
+  @keyframes square-to-circle {
+    0%  {
+      border-radius:0 0 0 0;
+      background:coral;
+      transform:rotate(0deg);
+    }
+    25%  {
+      border-radius:50% 0 0 0;
+      background:rgb(212, 40, 218);
+      transform:rotate(45deg);
+    }
+    50%  {
+      border-radius:50% 50% 0 0;
+      background:rgb(182, 219, 46);
+      transform:rotate(90deg);
+    }
+    75%  { 
+      border-radius:50% 50% 50% 0;
+      background:rgb(187, 39, 39);
+      transform:rotate(135deg);
+    }
+    100% {  
+      border-radius:50%;
+      background: rgb(21, 196, 30);
+      transform:rotate(180deg);
+    }
+  }
+
+}
+
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
 body {
 	background-image: linear-gradient(purple, red);
     height: 100%;
@@ -120,6 +169,8 @@ aside p {
     font-size: 16px;
     flex: 1 1 auto;
 }
+
+
 
 footer {
     display: flex;

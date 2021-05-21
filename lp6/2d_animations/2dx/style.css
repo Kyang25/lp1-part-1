@@ -1,0 +1,16 @@
+div {
+  width: 300px;
+  height: 100px;
+  background-color: rgb(51, 221, 51);
+  border: 1px solid rgb(172, 37, 37);
+}
+div#skewDiv {
+  /* IE 9 */
+  -ms-transform: skewX(20deg); 
+  
+  /* Safari */
+  -webkit-transform: skewX(20deg);
+  
+  /* Standard syntax */	
+  transform: skewX(20deg);
+}
